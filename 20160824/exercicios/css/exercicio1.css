@@ -1,0 +1,23 @@
+#caixa{
+	margin: auto;
+	width: 65%;
+	border:	1px	solid gray;
+	padding:8px;
+}
+
+h1{
+	text-transform: uppercase;
+	color:#3CB371;
+	text-align: center;
+
+}
+
+p{
+	text-indent: 4em ;
+	text-align: justify;
+	letter-spacing: 0.2em;
+}
+
+a{
+	text-decoration: none;
+}
