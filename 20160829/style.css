@@ -1,0 +1,46 @@
+
+/*Deve-se seguir essa ordem link->visited->hover->active*/
+
+/*altera a configuração no estado normal do link*/
+a:link{ 
+    color:red;
+    /*none, underline, overline, line-through*/
+    text-decoration: none;
+}
+
+
+/*altera a configuração no estado visitado do link*/
+a:visited{ 
+    color: green;
+    text-decoration: none;
+}
+
+/*altera a configuração no estado quando passa o mouse no link*/
+a:hover{ 
+    color: yellow;
+    text
+}
+
+/*altera a configuração no estado normal do link*/
+a:active{ 
+    color: blue;
+}
+
+/*lista nao ordenadas tem 5 valores, já as ordenadas podem ter 19 valores
+  ou podemos colocar imagens. 
+*/
+
+/*tag li filha de ul*/
+ul li{
+    list-style-image: url('imagem.png');
+}
+/*shorhand list-style*/
+ol li{
+    list-style-type: decimal;
+}
+
+table,th,td{
+    border: 1px solid green;
+    padding: 10px;
+    border-collapse: collapse;
+}

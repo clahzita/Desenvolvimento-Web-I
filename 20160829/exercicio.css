@@ -1,0 +1,35 @@
+table,th,td{  
+    padding: 5px;
+    border: 5px ridge #AFAFAF;
+    
+}
+
+table{
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th{
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+a:link{
+    text-decoration: none;
+    color:black;
+    background-color: green;
+}
+
+a:visited{
+    text-decoration: none;
+    color:purple;
+    background-color:grey;
+}
+
+a:hover{
+    text-decoration: none;
+    color:white;
+    background-color: black;
+}
