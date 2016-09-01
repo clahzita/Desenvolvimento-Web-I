@@ -1,0 +1,47 @@
+p{
+	/*borda da borda*/
+	outline: 1px;
+	/**/
+	margin: 50px;
+	/*Distancia entre a borda e o conteudo*/
+	padding: 
+}
+
+p{
+	/*borda da borda*/
+	outline: 1px;
+}
+
+/*propriedade de display
+Elementos que se comprotam como blocos(block): div, h1-h6,p form, header, footer e section*/
+/*inline: span, img*/
+h1{
+	display: block;
+	border: 1px solid green;
+	padding: 1px;
+	margin: 2px;
+}
+
+
+
+h2{
+	display: inline;
+	border: 1px solid red;
+	padding: 1px;
+	margin: 2px;
+	visibility: hidden;
+}
+
+h2:hover{
+	display: block;
+	visibility: visible;
+}
+
+li{
+	border: 1px solid red;
+	display: inline;
+	padding: 1px;
+	margin: 1px;
+
+}
+
