@@ -1,0 +1,32 @@
+body{
+	margin: auto;
+	max-width: 90%;
+}
+
+.corpoSite{
+	margin: 1%;
+	max-width: 80%;
+	border: 3px solid gray;
+	padding: 3px;
+	overflow: auto;
+}
+
+.conteudoSite{
+	float: right;
+	border: 3px solid fuchsia;
+	padding: 3px;
+	margin: 0%;
+	width: 69%;
+}
+
+.pato{
+	float: left;
+	width: 25%;
+	border: 3px solid orange;
+	
+}
+
+h1{
+	font-size: 1.5em;
+	text-align: center;
+}
