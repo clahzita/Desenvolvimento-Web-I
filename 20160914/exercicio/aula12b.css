@@ -1,0 +1,43 @@
+/*http://www.anra.com.br/ufrn/aula12/aula12_espelho.png*/
+
+body{
+	margin: auto;
+	max-width: 80%;
+
+}
+
+header, footer{
+	background-color: black;
+	color:white;
+	text-align:center;
+	padding-bottom: 0.625em;
+	padding-top: 0.625em;
+	font-weight: bold;
+}
+nav{
+	background-color: grey;
+	padding-bottom: 0.625em;
+	padding-top: 0.625em;
+}
+
+nav ul{
+	list-style:none;
+}
+
+nav ul li{
+	display: inline-block;
+	padding:0.3125em; 
+}
+
+nav ul li a{
+	text-decoration: none;
+	color:black;
+	
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+    background-color:black;
+    color: white;
+}
+

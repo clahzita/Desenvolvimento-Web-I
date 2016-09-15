@@ -1,0 +1,71 @@
+/* Import da Fonte "Special Elite" do Google Fonts */ 
+@import 'https://fonts.googleapis.com/css?family=Special+Elite';
+
+body {
+	margin: auto;
+	max-width: 80%;
+	/* background-color: orange; */
+	background-image: url("../imgs/bck.jpg");
+}
+
+header p{
+	margin: auto;
+	max-width: 80%;
+	text-indent: 0;
+	text-align: center;
+	font-family: "Special Elite";
+}
+
+h1{
+	text-align: center;
+	font-family: "Special Elite";
+	font-size: 4em;
+	color: maroon;
+	margin-bottom: 0;
+}
+
+p{
+	font-size: 1.5em;
+	text-indent: 2.5em;
+}
+
+p span.sublinhado{
+	text-decoration: underline;
+}
+
+table, th, td{
+	border: solid;
+	border-collapse: collapse;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 1.1em;
+}
+
+
+table td{
+	text-align: right;
+}
+
+
+.colunaTitulo{
+	text-align: left;
+	font-weight: bold;
+}
+
+.divTable{
+	margin: auto;
+	max-width: 800px;
+}
+
+a:link, a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+
+figure{
+	margin: auto;
+	max-width: 80%;
+	text-align: center;
+}
