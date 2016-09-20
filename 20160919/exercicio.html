@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<style type="text/css">
+		.par{
+			color:blue;
+			background-color: red;
+		}
+
+		.impar{
+			color:red;
+			background-color: blue;
+		}
+		table{
+			border-collapse: collapse;
+			border:1px dashed green;
+		}
+	</style>
+	<meta charset="utf-8">
+	<title>Exercicio1 - JS</title>
+</head>
+
+<body>
+	<script>
+
+
+		linhas = prompt("Digite a quantidade de linhas");
+		
+
+		
+		document.write("<table>");
+		for (var i = 1; i <= linhas; i++) {
+			if(i%2==0){
+				document.write("<tr class=\"par\"><td>"+i+"</td></tr>")
+			}
+			else{
+				document.write("<tr class=\"impar\"><td>"+i+"</td></tr>")
+			}
+			
+		}
+		document.write("</table");
+
+		
+	</script>
+</body>
+</html>
