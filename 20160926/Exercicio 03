@@ -1,0 +1,22 @@
+Exercicio pára rodar no console
+
+1:
+var x = prompt("Digite o primeiro número");
+var y= prompt("Digite o segundo número");
+var z = Number(x+y);
+document.writeln("Soma é "+z);
+
+2:
+var x = prompt("Digite o valor em metros");
+var z = Number(x)/1000;
+document.writeln("O valor "+x+" em metro(s) é "+z);
+
+3:
+var dia = prompt("digite a quantidade de dias");
+var horas = prompt("digite a quantidade de horas");
+var minutos = prompt("digite a quantidade de minutos");
+var segundos = prompt("digite a quantidade de segundos");
+var totalSegundos = Number(dia*86400+horas*3600+minutos*60+segundos);
+document.writeln(totalSegundos);
+
+
