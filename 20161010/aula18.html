@@ -1,0 +1,38 @@
+<!-- http://www.anra.com.br/ufrn/aula18/aula18g.html
+http://www.anra.com.br/ufrn/aula18/aula18f.html*/-->
+
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>Título da Página</title>
+    <meta charset="utf8" />
+    <script type="text/javascript">
+      /*
+        document -> objeto
+        getelementById -> metodo
+        innerHTML -> propriedade
+      */
+      function digaOi(nome){
+          document.getElementById("saudacao").innerHTML += 'Ola <b>' + nome + '! <br/>';
+      }
+
+      function perguntarNome(){
+            nome = prompt('Qual seu nome?');
+            digaOi( nome );
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <p>
+      O conteúdo da página aqui...
+    </p>
+	
+	<button onclick="perguntarNome();">Clique</button>
+	
+	<div id="saudacao"> Olá! </div>
+
+	
+  </body>
+</html>
