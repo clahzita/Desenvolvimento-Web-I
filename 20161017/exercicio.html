@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Tables</title>
+	<script type="text/javascript">
+		function escreverResultado(valor){
+			str = "Resultado: ";
+			if(valor < 0){
+				for (var i = valor; i < 0; i++) {
+					 str += i+", ";
+				}
+				
+				str += "e 0."
+			}
+			else if (valor == 0){
+				str += " 0."
+			}
+			else{
+				for (var i = 0; i < valor; i++) {
+					str += i+", ";
+				}
+				str += "e "+valor+"."
+			}
+			
+			document.getElementById("resultado").innerHTML = str;
+		}
+
+
+		function pegarValor(){
+			valor = prompt("Digite o valor");
+			escreverResultado(valor);
+		}
+
+	</script>
+</head>
+<body>
+
+	<button onclick="pegarValor();">Clique Aqui!</button>
+
+	<p id="resultado">Resultado:</p>
+
+	
+
+</body>
+</html>

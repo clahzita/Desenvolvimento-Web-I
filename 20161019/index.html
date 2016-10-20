@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Tag Form</title>
+	<script type="text/javascript">
+		function cadastrar(){
+			var lista = document.getElementById("lista");
+			lista.innerHTML += document.forms.cadastroCompleto.nomeCompleto.value + "<br/>";
+		}
+	</script>
+</head>
+<body>
+	<form name="cadastroCompleto">
+		<!---->
+		Nome: <input type="text" name="nomeCompleto"/><br/>
+		<br/>
+		Sexo:
+		<input type="radio" name="sexo" value="M">Masculino
+		<input type="radio" name="sexo" value="F">Feminino	<br/>
+		<br/>
+		Disciplinas que estou cursando:<br/>
+		<!-- checkbox se comporta como array-->
+		<input type="checkbox" name="disciplina" value="IMD0404">Web I<br/>
+		<input type="checkbox" name="disciplina" value="IMD0405">Web II<br/>
+		<br/>
+
+		<input type="button" value="Enviar" onclick="cadastrar();">
+	</form>
+
+	<div id="lista"></div>
+
+</body>
+</html>
