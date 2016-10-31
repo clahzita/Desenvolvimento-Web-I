@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  <!-- Recomenda-se sempre carregar o jQuery primeiro. -->
+    <script type="text/javascript" src="meusScripts.js"></script>                            <!-- crie o arquivo meusScripts.js, não altere o HTML. --> 
+
+    <style>
+        #bloco{
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="primeiro" class="paragrafo" >Eu sou um texto, clique-me e veja o que acontece!</p> <!-- Quando clicar nesse parágrafo, você deverá oculta-lo. -->
+
+        <div id="bloco" class="bloco" ></div> <!-- Ao clicar, os parágrafos somem da página. Se for um duplo click, o bloco some ao invés dos parágrafos. --> 
+
+        <h3>Eu sou um título e estou aqui para salvar todos!</h3> <!-- ao clicar 1x, o bloco deve surgir com efeito de "fadeIn" e ao clicar 2x, o bloco deve sumir com efeito fadeOut. -->
+
+        <p id="ultimo" class="paragrafo"> Eu to aqui só para comprovar que tudo pode dar errado... </p> <!-- Quando clicar nesse parágrafo, você deverá ocultar o primeiro parágrafo. -->
+    </div>
+</body>
+</html>

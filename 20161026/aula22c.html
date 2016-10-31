@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Exemplo adaptado from:
+https://api.jquery.com/mouseenter/
+ -->
+  <meta charset="utf-8">
+  <title>Mouse Enter Demo</title>
+  <style>
+  div.out {
+    width: 40%;
+    height: 120px;
+    margin: 0 15px;
+    background-color: #d6edfc;
+    float: left;
+  }
+  div.in {
+    width: 60%;
+    height: 60%;
+    background-color: #fc0;
+    margin: 10px auto;
+  }
+  p {
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+ 
+<div class="out enterleave">
+  <p>Movimente seu mouse!</p>
+  <div class="in enterleave"><p>Mova o mouse!</p><p>0</p></div>
+  <p>0</p>
+</div>
+ 
+<script>
+
+var n = 0;
+$( "div.enterleave" )
+	.mouseenter(
+		function() {
+    		$( "p:first", this ).text( "mouse enter" );
+    		$( "p:last", this ).text( ++n );
+  		})
+
+  	.mouseleave(function() {
+    	$( "p:first", this ).text( "mouse leave" );
+  	});
+</script>
+ 
+</body>
+</html>
