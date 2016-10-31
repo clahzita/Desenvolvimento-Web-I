@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		p{
+			color: #098877;
+		}
+	</style>
+	
+	<title>Exercicios Aula 16 - Q03</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var vetor1 = [2,5,6,7,8,9];
+		var vetor2 = [2,5,6,7,8,9];
+
+		if(vetor1.length < vetor2.length){
+			var tamanho = vetor1.length;
+		}else{
+			var tamanho = vetor2.length;
+		}
+
+
+		var soma = [];
+		for(var i = 0; i < tamanho; i++){
+			soma[i] = parseFloat(vetor1[i])+parseFloat(vetor2[i]);
+		}
+
+		document.write("<p>"+soma.toString()+"</p>");
+
+	</script>
+</body>
+</html>

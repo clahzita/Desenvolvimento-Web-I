@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Calculadora</title>
+	<meta charset="UTF-8">
+	<script src="aula14.js" type="text/javascript"></script>
+	<style>
+		table, td, tr{
+			margin: auto;
+			border-collapse: collapse;
+			border-color: black;
+			border-style: double;
+		}
+		table tr{
+			padding: 0.5em;
+		}
+		table td{
+			padding: 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		operacoes = prompt("Quantas operacoes deseja fazer?");
+
+		
+		document.write("<table>");
+
+		for(var lin = 1; lin <= operacoes; lin++){
+			document.write("<tr><td>");
+			op = prompt("Qual "+lin+"a operacao?","+, -, *");
+
+			if(op == "+"){
+				x = prompt("Digite o primeiro numero");
+				y = prompt("Digite o segundo numero");
+				document.write(soma(x,y));
+			}else if(op == "-"){
+				x = prompt("Digite o primeiro numero");
+				y = prompt("Digite o segundo numero");
+				document.write(subtracao(x,y));
+			}
+			else if(op == "*"){
+				x = prompt("Digite o primeiro numero");
+				y = prompt("Digite o segundo numero");
+				document.write(multiplicacao(x,y));
+			}
+			else{
+				window.alert("Operção inválida!");
+				document.write("---");
+			}
+
+			
+			document.write("</td></tr>");
+		}
+
+		document.write("</table>");
+	</script>
+</body>
+</html>

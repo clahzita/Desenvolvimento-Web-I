@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Tabela JS nivel hard</title>
+	<style>
+		table, td, tr{
+			margin: auto;
+			border-collapse: collapse;
+			border-color: black;
+			border-style: double;
+		}
+		table tr{
+			padding: 0.5em;
+		}
+		table td{
+			padding: 0.5em;
+		}
+		.par{
+			background-color: lightgreen;
+			color: black;
+		}
+		.impar{
+			background-color: darkgreen;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		linhas = prompt("digite o numero de linhas");
+		colunas = prompt("digite o numero de colunas");
+
+		document.write("<table>");
+
+		for(var lin = 1; lin <= linhas; lin++){
+			if(lin%2==0){
+				document.write("<tr class=\"par\">");
+			}else{
+				document.write("<tr class=\"impar\">");
+			}
+			for(var col = 1; col <= colunas; col++){
+					document.write("<td>linha"+lin+" coluna"+col);
+					document.write("</td>");
+			}
+			document.write("</tr>");
+		}
+
+		document.write("</table>");
+	</script>
+</body>
+</html>
+

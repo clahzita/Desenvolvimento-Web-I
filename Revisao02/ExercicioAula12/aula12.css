@@ -1,0 +1,47 @@
+body{
+	margin: auto;
+}
+
+header,footer{
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	padding-bottom: 0.9em;
+	padding-top: 0.9em;
+	
+
+}
+
+section{
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+nav{
+	background-color: lightgray;
+	color: black;
+	padding: 1em;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li{
+	display: inline-block;
+	
+	padding-right: 0.5em;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: black;
+
+}
+
+nav ul li a:hover{
+	text-decoration: none;
+	color:white;
+	background-color: black;
+}

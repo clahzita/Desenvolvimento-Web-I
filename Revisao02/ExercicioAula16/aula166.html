@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">	
+	<title>Exercicios Aula 16 - Q06</title>
+	<script type="text/javascript">
+
+		//retorna posicao se achar a url ou -1 caso contrário.
+		function buscaUrl(url,vetorUrl){
+			
+			for(var i=0;i<vetorUrl.length;i++){
+				
+				if(vetorUrl[i]==url){
+					window.alert("Encontrado!")
+					return i;		
+				}
+			}
+			window.alert("NAO encontrado!")
+			return -1;
+		}
+
+
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var url, posicao;
+		var altura = [];
+		var largura = [];
+		var vetorUrl = [];
+		var j =0;
+
+		//Enquanto o usuário confirmar que quer informar url
+		while(window.confirm("Deseja informar uma url para uma imagem?")){
+
+			url = prompt("Digite a url:");
+			posicao = buscaUrl(url,vetorUrl); 
+			
+			//caso a url já tenha sido registrada, verifica se usuario quer atualizar tamanho largura e altura	
+			if( posicao >= 0){
+				if(window.confirm("Deseja atualizar as informacoes de altura e largura?")){
+					altura[posicao] = prompt("Tamanho da altura da imagem (em px):");
+					largura[posicao] = prompt("Tamanho da largura da imagem (em px):");
+				}
+			}else{
+				vetorUrl[j] = url;
+				altura[j] = prompt("Tamanho da altura da imagem (em px):");
+			    largura[j] = prompt("Tamanho da largura da imagem (em px):");
+			}
+
+			j++;		
+		}
+
+		
+
+		for(var k = 0; k < vetorUrl.length;k++){
+			document.write("<img src=\""+vetorUrl[k]+"\" height=\""+altura[k]+"\" width=\""+largura[k]+"\"/>");
+
+		}
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">	
+	<title>Exercicios Aula 17</title>
+
+	<style>
+		table, td, tr, thead,tbody{
+			margin: auto;
+			border-collapse: collapse;
+			border-color: black;
+			border-style: double;
+		}
+		table tr{
+			padding: 0.5em;
+			height: 0.1em;
+		}
+		table td{
+			padding: 0.5em;
+			height: 0.1em;
+			text-align: center;	
+		}
+		
+		.firstcol{
+			text-align: left;
+		}
+
+	</style>
+
+	<script src="aula17.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<script type="text/javascript">
+		var pessoas = [];
+
+		var i = 0;
+
+		while( window.confirm("Realizar novo cadastro?") ){
+
+			firstName = prompt("Digite o primeiro nome");
+			lastName = prompt("Digite o ultimo nome:");
+			birthday = prompt("Data de nascimento","aaaa-mm-dd");
+			altura = prompt("Altura:");
+			peso = prompt("Peso:");
+			sexo = prompt("Sexo:");
+
+			pessoas[i] = new Pessoa(firstName,lastName,birthday,altura,peso,sexo);
+
+			i++;
+
+		}
+
+		
+		document.write("<table>");
+
+		
+
+		//1a linha
+		document.write("<thead><tr> <th>Nome</th> <th>Idade</th> <th>Sexo</th> <th>Data Nascimento</th> <th>IMC</th> </tr></thead><tbody>");
+
+		for(var j=0; j < pessoas.length;j++){
+
+			document.write("<tr>");
+			document.write("<td class=\"firstcol\">"+pessoas[j].nomeCompleto().toUpperCase()+"</td>");
+			document.write("<td>"+pessoas[j].idadeAtual()+"</td>");	
+			document.write("<td>"+pessoas[j].sexo+"</td>");
+			document.write("<td>"+pessoas[j].dataNascimento()+"</td>");
+			document.write("<td>"+pessoas[j].imc().toFixed(2)+"</td>");
+			document.write("</tr>");
+		}
+
+		document.write("</tbody></table>");
+
+	</script>
+	
+</body>
+</html>

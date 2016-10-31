@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		p{
+			color: #098877;
+		}
+	</style>
+	
+	<title>Exercicios Aula 16 - Q01</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var vetor = [];
+		for(var i = 0; i < 5; i++){
+			vetor[i] = prompt("Digite o "+(parseInt(i)+parseInt(1))+"o número" );
+		}
+
+		var soma = 0;
+		for(var i = 0; i < 5; i++){
+			soma += parseInt(vetor[i]);
+		}
+
+		document.write(soma);
+
+	</script>
+</body>
+</html>

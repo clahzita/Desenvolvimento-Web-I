@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		table, tr, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		table tr{
+			padding: 0.5em;
+		}
+		table td{
+			padding: 0.5em;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		function formatReal( int )
+		{
+        var tmp = int+'';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+        if( tmp.length > 6 )
+            tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+            return tmp;
+		}
+
+	</script>
+	
+	<title>Exercicios Aula 16 - Q05</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var matricula = prompt("Digite a matricula do funcionario:")
+		var nomeCompleto = prompt("Digite seu nome completo do funcionario:");
+		var horasTrabalhadas = prompt("Digite número de horas trabalhadas semanalmente pelo funcionario:");
+		var valorHora = prompt("Digite o valor que o funcionario recebe por hora:");
+		var filhos = prompt("Digite o número de filhos com idade menor de 18 anos");
+
+		document.write("<table>");
+
+		//1a linha: Nome completo do funcionario
+		document.write("<tr><td colspan=\"2\">"+nomeCompleto+"</td></tr>");
+
+		//2a linha Matricula
+		document.write("<tr>");
+		document.write("<td>Matrícula</td>");
+		document.write("<td>"+matricula+"</td>");
+		document.write("</tr>");
+
+		//3a linha Valor hora
+		document.write("<tr>");
+		document.write("<td>Valor da hora/trabalho</td>");
+		document.write("<td>R$ "+valorHora+"</td>");
+		document.write("</tr>");
+
+		//4a linha Horas trabalhadas
+		document.write("<tr>");
+		document.write("<td>Total de horas trabalhadas</td>");
+		document.write("<td>"+horasTrabalhadas+"h</td>");
+		document.write("</tr>");
+
+		//4a linha Qtde filhos
+		document.write("<tr>");
+		document.write("<td>Quantidade de filhos (<18)</td>");
+		document.write("<td>"+filhos+"</td>");
+		document.write("</tr>");
+		
+		var salario = valorHora*horasTrabalhadas;
+
+		var salarioTotal = salario + parseFloat((filhos*8/100*salario));
+
+		//5a linha Qtde filhos
+		document.write("<tr>");
+		document.write("<td>Salário Final</td>");
+		document.write("<td>"+formatReal(salarioTotal)+"</td>");
+		document.write("</tr>");
+
+
+
+		document.write("</table>");
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		table, tr, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		table tr{
+			padding: 0.5em;
+		}
+		table td{
+			padding: 0.5em;
+			text-align: center;
+		}
+	</style>
+	
+	<title>Exercicios Aula 16 - Q04</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nomeCompleto = prompt("Digite seu nome completo:");
+
+		var nomeDividido = nomeCompleto.split(" ");
+
+		colunas = nomeDividido.length;
+
+		document.write("<table>");
+
+		//1a linha: Nome completo em caixa alta
+		document.write("<tr><td colspan=\""+colunas+"\">"+nomeCompleto.toUpperCase()+"</td></tr>");
+
+		//2a linha Nome separado por coluna
+		document.write("<tr>");
+		for(var i = 0; i<colunas;i++){
+			document.write("<td>"+nomeDividido[i]+"</td>");		
+		}
+		document.write("</tr>");
+
+		//3a linha Quantidade de letras de cada nome por coluna
+		document.write("<tr>");
+		for(var i = 0; i<colunas;i++){
+			document.write("<td>"+nomeDividido[i].length+"</td>");		
+		}
+		document.write("</tr>");
+		
+
+
+
+
+		document.write("</table>");
+
+
+	</script>
+</body>
+</html>
