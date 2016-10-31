@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Exemplo adaptado from:
+https://api.jquery.com/mouseenter/
+ -->
+  <meta charset="utf-8">
+  <title>Mouse Enter Demo</title>
+  <style>
+  div.out {
+    width: 40%;
+    height: 120px;
+    margin: 0 15px;
+    background-color: #d6edfc;
+    float: left;
+  }
+  div.in {
+    width: 60%;
+    height: 60%;
+    background-color: #fc0;
+    margin: 10px auto;
+  }
+  p {
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+  
+  function aleatorio(inferior,superior){
+    numPosibilidades = superior - inferior;
+    aleat = Math.random() * numPosibilidades;
+    aleat = Math.floor(aleat);
+    return parseInt(inferior) + aleat;
+  } 
+
+
+  function dar_cor_aleatoria(){
+   hexadecimal = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F")
+   cor_aleatoria = "#";
+   for (i=0;i<6;i++){
+      posarray = aleatorio(0,hexadecimal.length);
+      cor_aleatoria += hexadecimal[posarray];
+   }
+   return cor_aleatoria;
+  } 
+
+
+  </script>
+</head>
+<body>
+ 
+<div class="out enterleave">
+  <p>Movimente seu mouse!</p>
+  <div class="in enterleave"><p>Mova o mouse!</p><p>0</p></div>
+  <p>0</p>
+</div>
+ 
+<script>
+
+var n = 0;
+$( "div.enterleave" )
+	.mouseenter(
+		function() {
+    		$( "p:first", this ).text( "mouse enter" );
+    		$( "p:last", this ).text( ++n );
+
+        $(this).css("background-color",dar_cor_aleatoria());
+  		})
+
+  	.mouseleave(function() {
+    	$( "p:first", this ).text( "mouse leave" );
+      $(this).css("background-color",dar_cor_aleatoria());
+  	});
+</script>
+ 
+</body>
+</html>
