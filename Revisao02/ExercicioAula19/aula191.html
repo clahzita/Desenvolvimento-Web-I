@@ -1,36 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8">	
-	<title>Exercicios Aula 18</title>
-	<script src="aula18ex.js" type="text/javascript"></script>
-	<style>
-		
-		
+	<meta charset="utf-8">
+	<title>Tables</title>
+	<script type="text/javascript">
+		function escreverResultado(valor){
+			str = "Resultado: ";
+			if(valor < 0){
+				for (var i = valor; i < 0; i++) {
+					 str += i+", ";
+				}
+				
+				str += "e 0."
+			}
+			else if (valor == 0){
+				str += " 0."
+			}
+			else{
+				for (var i = 0; i < valor; i++) {
+					str += i+", ";
+				}
+				str += "e "+valor+"."
+			}
+			
+			document.getElementById("resultado").innerHTML = str;
+		}
 
 
-	</style>
+		function pegarValor(){
+			valor = prompt("Digite o valor");
+			escreverResultado(valor);
+		}
 
-	
-
+	</script>
 </head>
 <body>
 
-	<button onclick="cadastrar();">Cadastrar</button>
+	<button onclick="pegarValor();">Clique Aqui!</button>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Nome</th>
-				<th>Idade</th>
-				<th>Sexo</th>
-				<th>Data Nascimento</th>
-				<th>IMC</th>
-			</tr>
-		</thead>
-		<tbody id="cadastros">
-		</tbody>
-	</table>
+	<p id="resultado">Resultado:</p>
+
 	
+
 </body>
 </html>

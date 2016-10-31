@@ -3,6 +3,9 @@
 <head>
 	<title>Aula 20</title>
 	<meta charset="utf8">
+	<script type="text/javascript">
+		
+	</script>
 </head>
 <body>
 
@@ -17,5 +20,36 @@
 	
 	<!-- Não sobrescreva o conteúdo da DIV abaixo. -->
 	<div id="resultado">Resultado: </div>
+
+	<script type="text/javascript">
+		
+		var a = document.getElementsByClassName("A");
+		var b = document.getElementsByClassName("B");
+		var c = document.getElementsByClassName("C");
+		var d = document.getElementsByClassName("D");
+
+		var numA = a[0].innerHTML;
+		var numB = b[0].innerHTML;
+		var numC = c[0].innerHTML;
+		var numD = d[0].innerHTML;
+
+		var somaAeC = parseInt(numA)+parseInt(numC);
+
+		var multBeD = numB*numD;
+
+		var result;
+
+		if(somaAeC > multBeD){
+			result = "A+C	é	maior	que	B*D";
+		}else if(somaAeC===multBeD){
+			result = "A+C	é	igual	a	B*D";
+		}else{
+			result = "A+C	é	menor	que	B*D";
+		}
+
+		document.writeln(result); 	
+
+
+	</script>
 </body>
 </html>
