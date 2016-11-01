@@ -6,10 +6,68 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  
     <script type="text/javascript" src="script/jQuery.js"></script>
-    <script type="text/javascript" src="script/scripts.js"></script>       
+    <script type="text/javascript" src="scripts.js"></script>   
+
+    <style>
+		table, td, tr,th{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		table tr{
+			padding: 0.5em;
+			height: 0.1em;
+		}
+		
+		table td, th{
+			padding: 0.5em;
+			height: 0.1em;
+			text-align: center;	
+		}
+
+	</style>    
 
 </head>
 <body>
-  
+	<form name="cadastroCompleto">
+		<!---->
+		Nome: <br/>
+		<input type="text" name="nomeCompleto" required/><br/>
+		<br/>
+		E-mail: <br/>
+		<input type="email" name="email"/><br/>
+		<br/>
+		Sexo:
+		<input type="radio" name="sexo" value="masc">Masculino
+		<input type="radio" name="sexo" value="fem">Feminino	<br/>
+		<br/>
+		Melhor dia da semana para estudar <strong>Desenvolvimento Web I</strong>:<br/>
+		<!-- checkbox se comporta como array-->
+		<input type="checkbox" name="diadasemana" value="segunda">Segunda-feira<br/>
+		<input type="checkbox" name="diadasemana" value="terca">Terça-feira<br/>
+		<input type="checkbox" name="diadasemana" value="quarta">Quarta-feira<br/>
+		<input type="checkbox" name="diadasemana" value="quinta">Quinta-feira<br/>
+		<input type="checkbox" name="diadasemana" value="sexta">Sexta-feira<br/>
+
+		
+		<br/>
+
+		<input type="button" value="Cadastrar" onclick="validarCadastro();">
+		<br/>
+	</form>
+
+	<br/>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>E-mail</th>
+				<th>Sexo</th>
+				<th>Dias</th>
+			</tr>
+		</thead>
+		<tbody id="cadastros">
+		</tbody>
+	</table>
+
 </body>
 </html>
