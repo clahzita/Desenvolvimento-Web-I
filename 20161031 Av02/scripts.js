@@ -100,7 +100,3 @@ function validarCadastro(){
 
 }
 
-$('cadastroCompleto').each (function(){
-  this.reset();
-});
-
